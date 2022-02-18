@@ -1,14 +1,18 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Main } from "./componenets/Main";
-import Details from "./componenets/Details";
+import { BrowserRouter, Router } from "react-router-dom";
 
 function App() {
   return (
     
     <div className="App">
+ <BrowserRouter>
+ <Router>
 
       <Main />
+ </Router>
+ </BrowserRouter>
       </div>
      
     
