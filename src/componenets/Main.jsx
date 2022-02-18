@@ -45,7 +45,7 @@ export const Main = () => {
                             md={{ offset: 2, span: 4 }}
                             lg={{ offset: 2, span: 4 }}
                             xl={{ offset: 3, span: 3 }}
-                            className="mb-3 p-0"
+                            className="mb-5 p-0" 
                         >
                             <Form.Group
                                 controlId="exampleForm.ControlInput1"
