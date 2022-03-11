@@ -1,10 +1,13 @@
+import React from 'react';
 import  { useEffect, useState } from 'react';
 import { Col, Container, Row, Form, Button, Jumbotron } from 'react-bootstrap';
-import DayCard from './DayCard';
+import { Weather } from '../types/interface';
+// import DayCard from './DayCard';
 import Details from './Details';
 
+
 export const Main = () => {
-    const [weather, setWeather] = useState(null)
+    const [weather, setWeather] = useState<Weather | null>(null)
     const [country, setCountry] = useState('')
 
     // const keyNumber = process.env.REACT_APP_API_  
@@ -77,8 +80,6 @@ export const Main = () => {
                         
                          }
                          <Row className="mt-5 d-flex   justify-content-center">
-            
-               
               <Col
                         style={{ height: "20vh" }}
                         className="mb-2 px-0"
@@ -87,16 +88,9 @@ export const Main = () => {
                         md={2}
                         lg={1}
                         xl={1}
-                        style={{
-                          marginLeft: "10px",
-                          marginRight: "10px",
-                        }}
                       >
-                {weather && <DayCard weatherObj={weather} /> }
+                {/* {weather && <DayCard weatherObj={weather} /> } */}
                       </Col>
-                  
-              
-            
           </Row>
 
                         </Col>
