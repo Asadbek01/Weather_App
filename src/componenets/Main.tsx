@@ -1,13 +1,13 @@
 import React from 'react';
 import  { useEffect, useState } from 'react';
-import { Col, Container, Row, Form, Button, Jumbotron } from 'react-bootstrap';
-import { Weather } from '../types/interface';
-// import DayCard from './DayCard';
+import { Col, Container, Row, Form, Button } from 'react-bootstrap';
+import { RootObject  } from '../types/interface';
+import DayCard from './DayCard';
 import Details from './Details';
 
 
 export const Main = () => {
-    const [weather, setWeather] = useState<Weather | null>(null)
+    const [weather, setWeather] = useState <RootObject | null>(null)
     const [country, setCountry] = useState('')
 
     // const keyNumber = process.env.REACT_APP_API_  
@@ -42,7 +42,7 @@ export const Main = () => {
                         e.preventDefault();
                     }}
                 >
-                    <Row className="mt-5">
+                    <Row className="mt-3">
                         <Col
                             sm={{ offset: 1, span: 5 }}
                             md={{ offset: 2, span: 4 }}
@@ -81,15 +81,15 @@ export const Main = () => {
                          }
                          <Row className="mt-5 d-flex   justify-content-center">
               <Col
-                        style={{ height: "20vh" }}
-                        className="mb-2 px-0"
+                        style={{ height: "15vh" }}
+                        className="px-0"
                         xs={6}
                         sm={3}
                         md={2}
                         lg={1}
                         xl={1}
                       >
-                {/* {weather && <DayCard weatherObj={weather} /> } */}
+                {weather && <DayCard weatherObj={weather} /> }
                       </Col>
           </Row>
 
