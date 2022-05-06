@@ -30,6 +30,5 @@ export default function Details({ weatherObj }: WeatherObject) {
 
   );
   
-    // <DayCard />
   
 }
